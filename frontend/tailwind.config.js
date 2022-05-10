@@ -11,10 +11,14 @@ module.exports = {
       lg:"1024px"
     },
     fontFamily: {
-    sans: ["Lato, sans-serif"],
+    lato: ["Lato, sans-serif"],
     raleway: ["Raleway, sans-serif"],
     openSans: ["font-family: 'Raleway', sans-serif"]
-    }
+    },
+    borderWidth: {
+      '10': '10px',
+      '12': '12px',
+    },
   },
   plugins: [],
 }

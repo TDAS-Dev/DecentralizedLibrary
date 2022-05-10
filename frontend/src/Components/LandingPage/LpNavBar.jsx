@@ -3,8 +3,8 @@ import Button from "../Utility/Button"
 
 function LpNavBar(){
     return(
-        <div className="flex justify-between items-center px-4">
-            <Logo/>
+        <div className="flex justify-between items-center py-10 px-20">
+            <Logo className=""/>
             <Button className="" name="Connect"/>
         </div>
     )
