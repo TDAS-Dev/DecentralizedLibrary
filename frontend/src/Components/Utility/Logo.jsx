@@ -1,4 +1,4 @@
-import logo from "../../Images/ARC803_Major Project_Presentation.png"
+import logo from "../../Images/logo.png"
 
 function Logo(){
     return(
