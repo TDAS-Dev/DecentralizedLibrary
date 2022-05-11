@@ -13,7 +13,8 @@ module.exports = {
     fontFamily: {
     lato: ["Lato, sans-serif"],
     raleway: ["Raleway, sans-serif"],
-    openSans: ["font-family: 'Raleway', sans-serif"]
+    openSans: ["font-family: 'Raleway', sans-serif"],
+    kumbh: ["font-family: 'Kumbh Sans', sans-serif;"]
     },
     borderWidth: {
       '10': '10px',
