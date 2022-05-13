@@ -3,9 +3,9 @@ import Button from "../Utility/Button"
 
 function LpNavBar(){
     return(
-        <div className="flex justify-between items-center py-10 px-20">
+        <div className="flex lg:flex-row md:flex-col sm:flex-col justify-between items-center py-10 px-20">
             <Logo className=""/>
-            <Button className="" name="Connect"/>
+            <Button className="md:hidden sm:hidden  lg:block" name="Connect"/>
         </div>
     )
 }
