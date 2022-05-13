@@ -41,3 +41,6 @@ function LandingPage(props){
 }
 
 export default LandingPage;
+
+//Buttons on md and lg screens are off in their vertical allignment
+//add the navigation react router for the buton and for the euphoria image
