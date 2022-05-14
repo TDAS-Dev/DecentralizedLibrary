@@ -1,5 +1,5 @@
 import NavBar from "../Utility/NavBar";
-import About from "/About";
+import About from "./About";
 import Footer from "../Utility/Footer";
 
 function AboutPage(props){
