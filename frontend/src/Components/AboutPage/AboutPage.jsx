@@ -1,6 +1,5 @@
 import NavBar from "../Utility/NavBar";
 import About from "./About";
-import AboutNew from "./AboutNew";
 import Footer from "../Utility/Footer";
 
 function AboutPage(props){
@@ -8,7 +7,7 @@ function AboutPage(props){
     return(
         <div className="lg:min-h-screen lg:flex lg:flex-col">
             <NavBar/>
-            <AboutNew/>
+            <About/>
             <Footer className=""/>
         </div>
     )
