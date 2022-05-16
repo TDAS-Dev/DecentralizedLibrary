@@ -43,19 +43,26 @@ function Home() {
     ]
                                                                                                                                               
     return (
-        <div classname="flex flex-wrap lg:justify-center md:justify-center lg:w-[75%] md:w-[80%] sm:[90%]">
-            {data.map((elem, i) => {
-                return (
-                    <div className="flex">
-                        <img src={images[i]} alt="" />
-                        <h1>{elem.name}</h1>
-                        <p>{elem.link}</p>
-                        <p>{elem.uploader}</p>
-                    </div>
-                )
-            })}
+        <div classname="">
+            <div className="flex flex-wrap w-screen px-[5%]">
+                {data.map((elem, i) => {
+                    return (
+                        <div className="flex flex-col lg:p-5 md:p-4 sm:p-3 bg-gray-400 lg:m-2 md:m-2 sm:m-0 lg:w-[20%] md:w-[45%] sm:w-[100%]">
+                            <div className="">
+                                <img src={images[i]} alt="" className="w-auto h-auto"/>
+                            </div>
+                            <h1 className={h1HomeStyle}>{elem.name}</h1>
+                            <p className={pHomeStyle}>{elem.link}</p>
+                            <p className={pHomeStyle}>{elem.uploader}</p>
+                        </div>
+                    )
+                })}
+            </div>
         </div>
       );
 }
+
+const pHomeStyle = `font-medium lg:text-[9px] md:text-[9px] sm:text-[12px] sm:text-center underline text-red-600 cursor-pointer`
+const h1HomeStyle = `text-black font-bold lg:text-[14px] md:text-[16px] sm:text-[16px] font-raleway sm:text-center`
 
 export default Home;
