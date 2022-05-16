@@ -2,6 +2,7 @@
 // import AboutPage from "./Components/AboutPage/AboutPage";
 // import UploadPage from "./Components/UploadPage/UploadPage";
 import HomePage from "./Components/HomePage/HomePage";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
