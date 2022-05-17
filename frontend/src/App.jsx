@@ -4,6 +4,7 @@ import UploadPage from "./Components/UploadPage/UploadPage";
 import HomePage from "./Components/HomePage/HomePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import { Link } from "react-router-dom";
+
 function App() {
   return (
     <div className="App">
