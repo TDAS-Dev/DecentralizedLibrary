@@ -47,7 +47,7 @@ function Home() {
             <div className="flex flex-wrap w-screen px-[5%]">
                 {data.map((elem, i) => {
                     return (
-                        <div className="flex flex-col lg:p-5 md:p-4 sm:p-3 bg-gray-400 lg:m-2 md:m-2 sm:m-0 lg:w-[20%] md:w-[45%] sm:w-[100%]">
+                        <div key={i} className="flex flex-col lg:p-5 md:p-4 sm:p-3 bg-gray-400 lg:m-2 md:m-2 sm:m-0 lg:w-[20%] md:w-[45%] sm:w-[100%]">
                             <div className="">
                                 <img src={images[i]} alt="" className="w-auto h-auto"/>
                             </div>

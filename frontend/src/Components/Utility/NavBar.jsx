@@ -1,6 +1,7 @@
 import Logo from "./Logo"
 import accountImage from "../../Images/account png.png"
 import Hamburger from "./Hamburger"
+import {Link} from "react-router-dom"
 
 function NavBar(){
     return(
@@ -8,10 +9,10 @@ function NavBar(){
             <Hamburger className=""/>
             <Logo className=""/>
             <div className="lg:block md:block sm:hidden flex items-center justify-between lg:space-x-32 md:space-x-8">
-                <a href="" className={linksStyle}>Home</a>
-                <a href="" className={linksStyle}>Upload</a>
-                <a href="" className={linksStyle}>Private</a>
-                <a href="" className={linksStyle}>Project Team</a>
+                <Link to="/home" className={linksStyle}>Home</Link>
+                <Link to="/upload" className={linksStyle}>Upload</Link>
+                <Link to="/private" className={linksStyle}>Private</Link>
+                <Link to="/project-team" className={linksStyle}>Project Team</Link>
             </div>
             <img src={accountImage} alt="" className="h-auto w-[30px] cursor-pointer lg:block md:block sm:hidden"/>
         </div>
