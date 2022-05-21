@@ -1,9 +1,19 @@
 
-function Hamburger(){
+function Hamburger({setMobileNavBar, mobileNavBar}){
+    const navBarHandler = () => {
+        if (mobileNavBar) {
+            setMobileNavBar(false)
+        } else {
+            setMobileNavBar(true)
+        }
+    }
     return(
-        <div className="lg:hidden md:hidden sm:block cursor-pointer w-[20px] h-[3px] bg-black sm:absolute left-[5px]">
+        <div className="lg:hidden md:hidden sm:block cursor-pointer sm:absolute left-[25px]" onClick={navBarHandler}>
+            <div className={lineStyle}></div>
+            <div className={lineStyle}></div>
+            <div className={lineStyle}></div>
         </div>
     )
 }
-
+const lineStyle = `w-[25px] h-[3px] bg-black m-[2px]`
 export default Hamburger;

@@ -7,10 +7,10 @@ import LpImage2 from "../../Images/landingPageImg2.jpg"
 import LpImage3 from "../../Images/landingPageImg3.jpg"
 import LpImage4 from "../../Images/landingPageImg4.jpg"
 
-function LandingPage(props){
+function LandingPage({ setMobileNavBar, mobileNavBar }){
     return(
         <div className="h-full w-full">
-            <Hero/>
+            <Hero setMobileNavBar={setMobileNavBar} mobileNavBar ={mobileNavBar}/>
             <LpCardLeft 
                 h1 ="Upload documents to Ipfs,Infura."
                 p ="One upload, lifetime access to your document at your calling and choice."
