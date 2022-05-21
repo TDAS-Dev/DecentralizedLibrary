@@ -1,6 +1,6 @@
 import Oghenetega from "../../Images/Oghenetega.png"
 
-const data = [
+const AboutData = [
     {
         image: Oghenetega,
         name: "Esedere Oghenetega Kelvin",
@@ -41,4 +41,4 @@ const data = [
     }
 ]
 
-export default data
+export default AboutData

@@ -2,6 +2,10 @@ import uploadIcon from "../../Images/uploadIcon.png"
 import Button from "../Utility/Button";
 
 function UploadIcon(props){
+
+    // function upload() {
+        
+    // }
        
     return(
         <div className="flex flex-col items-center">
