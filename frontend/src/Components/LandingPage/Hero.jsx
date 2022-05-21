@@ -2,11 +2,11 @@ import LpNavBar from "./LpNavBar"
 import heroImage from ".././../Images/landingPage.jpg"
 import Button from "../Utility/Button"
 
-function Hero(props){
+function Hero({ setMobileNavBar, mobileNavBar }){
     
     return(
         <div className={heroPageStyle} style={heroStyle}>
-            <LpNavBar/>
+            <LpNavBar setMobileNavBar={setMobileNavBar} mobileNavBar ={mobileNavBar}/>
             <div className="lg:py-40 md:py-40 sm:pt-20 sm:pb-40 lg:flex lg:flex-col lg:items-center">
                 <h2 className={h2herostyle}>Welcome Back!</h2>
                 <h1 className={h1herostyle}>Unlimited books, Articles, and more.</h1>

@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<LandingPage setMobileNavBar={setMobileNavBar} mobileNavBar ={mobileNavBar}/>} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/project-team" element={<AboutPage setMobileNavBar={setMobileNavBar} mobileNavBar ={mobileNavBar}/>} />
           <Route path="/upload" element={<UploadPage />} />

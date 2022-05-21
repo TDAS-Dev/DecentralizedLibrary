@@ -7,7 +7,7 @@ function NavBar( { setMobileNavBar, mobileNavBar} ){
     return(
         <div className="flex sm:relative lg:justify-between md:justify-between sm:justify-center items-center py-10 lg:px-20 md:px-12 h-[10vh]">
             <Hamburger className="" setMobileNavBar={setMobileNavBar} mobileNavBar={mobileNavBar}/>
-            <Logo className=""/>
+            <Link to="/"><Logo className=""/></Link>
             <div className={mobileNavBar ?
                 "lg:block md:block flex items-center lg:justify-between md:justify-between lg:space-x-32 md:space-x-8 sm:h-[90vh] sm:w-[50%] sm:left-0 sm:absolute sm:top-[10vh] sm:bg-gray-600 sm:flex-col sm:justify-around sm:translate-x-[0%] sm:transition sm:ease-in sm:transform sm:duration-500" : 
                 "lg:block md:block flex items-center lg:justify-between md:justify-between lg:space-x-32 md:space-x-8 sm:h-[90vh] sm:w-[50%] sm:left-0 sm:absolute sm:top-[10vh] bg-white sm:flex-col sm:justify-around sm:translate-x-[-100%] sm:transition sm:ease-in sm:transform sm:duration-500"
