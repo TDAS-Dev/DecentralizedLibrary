@@ -12,8 +12,8 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/home" element={<HomePage />} />
-          <Route path="project-team" element={<AboutPage />} />
-          <Route path="upload" element={<UploadPage />} />
+          <Route path="/project-team" element={<AboutPage />} />
+          <Route path="/upload" element={<UploadPage />} />
         </Routes>
       </BrowserRouter>
     </div>
