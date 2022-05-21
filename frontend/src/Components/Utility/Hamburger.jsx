@@ -1,19 +1,20 @@
 
-function Hamburger(){
+function Hamburger({setMobileNavBar, mobileNavBar}){
+    const navBarHandler = () => {
+        console.log("fired")
+        if (mobileNavBar) {
+            setMobileNavBar(false)
+        } else {
+            setMobileNavBar(true)
+        }
+    }
     return(
-<<<<<<< Updated upstream
-        <div className="lg:hidden md:hidden sm:block cursor-pointer  sm:absolute left-[25px]">
-            <div className="line1 w-[25px] h-[3px] bg-black my-[4px]"></div>
-            <div className="line2 w-[25px] h-[3px] bg-black my-[4px]"></div>
-            <div className="line3 w-[25px] h-[3px] bg-black my-[4px]"></div>
-=======
-        <div className="lg:hidden md:hidden sm:block cursor-pointer sm:absolute left-[10px]">
-            <div className={lineStyke}></div>
-            <div className={lineStyke}></div>
-            <div className={lineStyke}></div>
->>>>>>> Stashed changes
+        <div className="lg:hidden md:hidden sm:block cursor-pointer sm:absolute left-[25px]" onClick={navBarHandler}>
+            <div className={lineStyle}></div>
+            <div className={lineStyle}></div>
+            <div className={lineStyle}></div>
         </div>
     )
 }
-const lineStyke = `w-[20px] h-[3px] bg-black m-[2px]`
+const lineStyle = `w-[25px] h-[3px] bg-black m-[2px]`
 export default Hamburger;
