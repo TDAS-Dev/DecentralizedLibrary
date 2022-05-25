@@ -9,6 +9,9 @@ To Do List.
 
 Project Team Page
 1. Abiola to fill in his details for the Project Team Page
+2. Introduce the buttons for the stack
+background-color: #feae96;
+background-image: linear-gradient(315deg, #feae96 0%, #fe0944 74%);
 
 Home Page
 1. Complete the styling of the cards for each book and for the page as a whole (Tonight)
@@ -23,9 +26,10 @@ Upload Page
 
 Landing Page
 1. Sort out the image background for the Library landing page prevent the blurriness
-2. Link the explore Library button to the home page (Tonight)
-3. link the functionality of connect buttons to metamask using moralis sdk
+2. Link the explore Library button to the home page (Tonight) (DONE)
+3. link the functionality of connect buttons to metamask using moralis sdk (DONE)
 
 NavBar
-1. Add the routing to the home page logo. (Tonight)
-2. Add hamburger to navbar using the fontawesome icon (tonight)
+1. Add the routing to the home page logo. (Tonight) (DONE)
+2. Add hamburger to navbar using the fontawesome icon (tonight) (SCRAPPED)
+3. Redo all corrections to the navBar component

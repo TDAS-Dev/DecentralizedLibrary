@@ -1,9 +1,10 @@
 import LpNavBar from "./LpNavBar"
 import heroImage from ".././../Images/landingPage.jpg"
 import Button from "../Utility/Button"
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Hero({ setMobileNavBar, mobileNavBar }){
-    
     return(
         <div className={heroPageStyle} style={heroStyle}>
             <LpNavBar setMobileNavBar={setMobileNavBar} mobileNavBar ={mobileNavBar}/>
@@ -13,7 +14,7 @@ function Hero({ setMobileNavBar, mobileNavBar }){
                 {/* <h1 className={h1herostyle}></h1> */}
                 <h2 className={h2herostyle}>Read anytime. Access anywhere.</h2>
                 <div className={buttonDivStyle}>
-                    <Button className="" name="Explore Library"/>
+                    <Link to="/home"><Button className="" name="Explore Library"/></Link>
                     <Button className="" name="Connect Wallet"/>
                 </div>
             </div>

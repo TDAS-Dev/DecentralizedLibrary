@@ -1,10 +1,13 @@
 
 function Hamburger({setMobileNavBar, mobileNavBar}){
     const navBarHandler = () => {
+        console.log("fired")
         if (mobileNavBar) {
+            console.log("false")
             setMobileNavBar(false)
         } else {
             setMobileNavBar(true)
+            console.log("true")
         }
     }
     return(

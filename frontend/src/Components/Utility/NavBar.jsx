@@ -22,7 +22,7 @@ function NavBar( { setMobileNavBar, mobileNavBar} ){
     )
 }
 
-const linksStyle = `font-lato font-black text-center lg:text-[1.1rem] md:text-[0.9rem] sm:opacity-0 sm:transition sm:ease-in sm:transform sm:duration-500`
+const linksStyle = `font-lato font-black text-center lg:text-[1.1rem] md:text-[0.9rem] lg:opacity-1 md:opacity-1 sm:opacity-0 sm:transition sm:ease-in sm:transform sm:duration-500`
 const linksStyleMobile = `font-lato font-black text-center lg:text-[1.1rem] md:text-[0.9rem] sm:opacity-1 sm:transition sm:ease-in sm:transform sm:duration-500`
 
 export default NavBar;

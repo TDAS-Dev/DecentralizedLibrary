@@ -8,7 +8,7 @@ function LpNavBar( { setMobileNavBar, mobileNavBar} ){
   const { authenticate, isAuthenticated } = useMoralis();
 
   const login = async () => {
-    console.log("fired")
+    console.log("connecting buttons")
     if (!isAuthenticated) {
       await authenticate({signingMessage: "Log in using Moralis" })
         .then(function (user) {
@@ -25,7 +25,9 @@ function LpNavBar( { setMobileNavBar, mobileNavBar} ){
     <div className="flex lg:flex-row md:flex-col sm:flex-col justify-between items-center py-10 px-20">
       <Hamburger className="" setMobileNavBar={setMobileNavBar} mobileNavBar={mobileNavBar}/>
       <Link to="/"><Logo className=""/></Link>
-      <Button className="md:hidden sm:hidden  lg:block" name="Connect"/>
+      <Button className="md:hidden sm:hidden  lg:block" name="Connect" run={login}/>
     </div>
   )
 }
+
+export default LpNavBar

@@ -14,4 +14,3 @@ function AboutPage({setMobileNavBar, mobileNavBar}){
 }
 
 export default AboutPage;
-//The footer doesn't reach the bottom of the screen because of the height. Check this out.
