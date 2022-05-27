@@ -8,7 +8,7 @@ function LpNavBar( { setMobileNavBar, mobileNavBar} ){
   const { authenticate, isAuthenticated } = useMoralis();
 
   const login = async () => {
-    console.log("connecting buttons")
+    //if user is authenticated already, do not login user again. $resource management
     if (!isAuthenticated) {
       await authenticate({signingMessage: "Log in using Moralis" })
         .then(function (user) {
