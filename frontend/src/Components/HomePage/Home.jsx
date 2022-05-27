@@ -3,19 +3,19 @@ import ImageTest2 from "../../Images/Test02.jpg"
 import ImageTest3 from "../../Images/Test03.png"
 import ImageTest4 from "../../Images/Test04.png"
 import ImageTest5 from "../../Images/Test05.jpg"
-import data from "./HomeData"
+//import moralis functions from their docs (used to connect to smart contract)
 // import { useWeb3ExecuteFunction } from "react-moralis";
-
+//import dummy data that I used to test the styling and original setup
+import data from "./HomeData"
 
 function Home() {
-
+    //The code below was funtioning then it broke and Tega has not figured it out.
+    //Please make use of the dummy data array that I created in the HomeData.js file and imported on line 9 of Home.jsx
     // const contractProcessor = useWeb3ExecuteFunction()
 
-    //function to get the array of objects uploaded in the library from the smart contract
+    // // function to get the array of objects uploaded in the library from the smart contract
     // const retrieve = async () => {
-    //     console.log("retireve button clicked")
     //     const uploadedCIDS = await _getListOfAllUploadedCIDS()
-    //     console.log(uploadedCIDS)
     //     const metadataArray = []
     //     for( let i = 0; i < uploadedCIDS.length; i++){
     //         const element = uploadedCIDS[i]
@@ -49,7 +49,7 @@ function Home() {
     // }
 
     // retrieve()
-    
+
     //dummy data for the test images used during styling
     const images = [
         ImageTest1, ImageTest2, ImageTest3, ImageTest4, ImageTest5
@@ -58,6 +58,7 @@ function Home() {
     return (
         <div className="">
             <div className="flex flex-wrap space-x-10 w-[75%]">
+                {/* //mapping over the dummy data to create fake library data for now */}
                 {data.map((elem, i) => {
                     return (
                         <div key={i} className="bg-gray-600 rounded-lg w-[250px]">

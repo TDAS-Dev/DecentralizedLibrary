@@ -1,5 +1,0 @@
-4. Finish the deployment to Netlify. (Tonight)
-2. Link the explore Library button to the home page (Tonight)
-1. Add the routing to the home page logo. (Tonight)
-2. Add hamburger to navbar using the fontawesome icon (tonight)
-1. Complete the styling of the cards for each book and for the page as a whole (Tonight)
