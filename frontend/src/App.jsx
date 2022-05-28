@@ -4,11 +4,13 @@ import UploadPage from "./Components/UploadPage/UploadPage";
 import HomePage from "./Components/HomePage/HomePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
+import { MoralisProvider } from "react-moralis";
+import MoralisServer from "./utils/key"
 
 function App() {
   const [ mobileNavBar, setMobileNavBar ] = useState(false)
   return (
-    <div className="App">
+    <MoralisProvider appId={MoralisServer.appId} serverUrl={MoralisServer.serverUrl}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage setMobileNavBar={setMobileNavBar} mobileNavBar ={mobileNavBar}/>} />
@@ -17,7 +19,7 @@ function App() {
           <Route path="/upload" element={<UploadPage />} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </MoralisProvider>
   );
 }
 export default App;
