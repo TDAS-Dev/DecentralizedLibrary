@@ -8,23 +8,23 @@ const SideBar = () => {
   return (
     <div className="flex flex-col">
       <ul className="space-y-4">
-        <li className="flex space-x-4 items-center">
+        <li className="flex p-2 space-x-4 items-center">
           <AiFillHome />
           <Link to="/">Home</Link>
         </li>
-        <li className="flex space-x-4 items-center">
+        <li className="flex p-2 space-x-4 items-center">
           <MdFavorite />
           <Link to="/">Favourite</Link>
         </li>
-        <li className="flex space-x-4 items-center">
+        <li className="flex p-2 space-x-4 items-center">
           <BsPlayFill />
           <Link to="/">Content</Link>
         </li>
-        <li className="flex space-x-4 items-center">
+        <li className="flex p-2 space-x-4 items-center">
           <BsPlayFill />
           <Link to="/">Playlist</Link>
         </li>
-        <li className="flex space-x-4 items-center">
+        <li className="flex p-2 space-x-4 items-center">
           <BiHistory />
           <Link to="/">History</Link>
         </li>
