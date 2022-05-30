@@ -29,16 +29,16 @@ const Nav = () => {
                 </a>
               </li>
               <li>
-                <button className="bg-green-200 hover:bg-green-300 px-7 text-green-700 py-2 flex items-center">
-                  <BiStopCircle className="text-2xl mr-2 text-green-700" />
+                <button className="bg-blue-200 hover:bg-blue-300 px-7 text-blue-700 py-2 flex items-center">
+                  <BiStopCircle className="text-2xl mr-2 text-blue-700" />
                   Record
                 </button>
               </li>
               <li>
-                <button className="bg-green-500 hover:bg-green-600 px-7 text-green-50 py-2 flex items-center">
+                <button className="bg-blue-500 hover:bg-blue-600 px-7 text-blue-50 py-2 flex items-center">
                   <AiOutlineCloudDownload
                     type="FaRegular"
-                    className="text-2xl mr-2 text-green-50"
+                    className="text-2xl mr-2 text-blue-50"
                   />
                   Upload
                 </button>

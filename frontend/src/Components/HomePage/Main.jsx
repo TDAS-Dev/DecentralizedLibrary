@@ -1,9 +1,18 @@
 import Card from "./Card";
+import Data from "./data/HomeData"
+import {Link} from "react-router-dom"
+import {FaCaretLeft, FaCaretRight} from "react-icons/fa"
 const Main = () => {
   return (
     <div className="container w-full flex flex-col">
       <section className="">
+        <div className="flex justify-between items-center">
         <h2 className="text-2xl my-2">New Uploads</h2>
+        <div className="flex space-x-6">
+          <FaCaretLeft size={24} className="text-blue-500 text-2xl hover:text-blue-600 "/>
+          <FaCaretRight size={24} className="text-blue-500 text-2xl hover:text-blue-600 "/>
+        </div>
+        </div>
         <img
           src="https://tinyurl.com/mvnamm6s"
           alt=""
@@ -13,7 +22,29 @@ const Main = () => {
       <section className="my-2">
         <h2 className="text-2xl my-2">Public</h2>
         <div className="grid grid-cols-4 gap-4">
-          <Card className="">
+          {
+            Data.length > 0 ?
+            Data.map((data, index) =>(
+              <Card key={index} className="break-normal">
+                <img
+                  src="https://tinyurl.com/ued8wzz6"
+                  alt="image"
+                  className="w-full"
+                />
+                <div className="px-3 py-2">
+                  <h2 className="text-lg truncate">{data.name}</h2>
+                  <div className="text-sm truncate">{data.uploader}</div>
+                  <span className="text-sm text-gray-600">{data.status}</span>
+                  <div>
+                    <Link to={data.link} className="text-blue-500 float-right hover:text-blue-600 my-2 py-2 px-3 rounded">Learn More</Link></div>
+                </div>
+              </Card>
+            ))
+            :
+              <div className="text-center py-3 text-gray-600">No public file</div>
+          }
+
+          {/* <Card className="">
             <img
               src="https://tinyurl.com/ued8wzz6"
               alt="image"
@@ -24,45 +55,7 @@ const Main = () => {
               <div className="text-sm">By Abiola</div>
               <span>6.3K views | 1 hours ago</span>
             </div>
-          </Card>
-          <Card className="">
-            <img
-              src="https://tinyurl.com/ued8wzz6"
-              alt="image"
-              className="w-full"
-            />
-            <div className="px-3 py-2">
-              <h2 className="text-lg">Minimal Photography</h2>
-              <div className="text-sm">By Abiola</div>
-              <span>6.3K views | 1 hours ago</span>
-            </div>
-          </Card>
-          <Card className="">
-            <img
-              src="https://tinyurl.com/ued8wzz6"
-              alt="image"
-              className="w-full"
-            />
-            <div className="px-3 py-2">
-              <h2 className="text-lg">Minimal Photography</h2>
-              <div className="text-sm">By Abiola</div>
-              <span>6.3K views | 1 hours ago</span>
-            </div>
-          </Card>
-          <Card className="">
-            <img
-              src="https://tinyurl.com/ued8wzz6"
-              alt="image"
-              className="w-full"
-            />
-            <div className="px-3 py-2">
-              <h2 className="text-lg">Minimal Photography</h2>
-              <div className="text-sm">By Abiola</div>
-              <span>6.3K views | 1 hours ago</span>
-            </div>
-          </Card>
-          <Card>Card Two</Card>
-          <Card>Card Three</Card>
+          </Card> */}
         </div>
       </section>
     </div>
