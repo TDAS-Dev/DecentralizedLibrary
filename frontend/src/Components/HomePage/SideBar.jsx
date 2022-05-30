@@ -1,33 +1,18 @@
 import { Link } from "react-router-dom";
-import { AiFillHome } from "react-icons/ai";
-import { MdFavorite } from "react-icons/md";
-import { BsPlayFill } from "react-icons/bs";
-import { BiHistory } from "react-icons/bi";
+import SideInfo from "./data/sidebar";
 
 const SideBar = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col w-[150px]">
       <ul className="space-y-4">
-        <li className="flex p-2 space-x-4 items-center">
-          <AiFillHome />
-          <Link to="/">Home</Link>
-        </li>
-        <li className="flex p-2 space-x-4 items-center">
-          <MdFavorite />
-          <Link to="/">Favourite</Link>
-        </li>
-        <li className="flex p-2 space-x-4 items-center">
-          <BsPlayFill />
-          <Link to="/">Content</Link>
-        </li>
-        <li className="flex p-2 space-x-4 items-center">
-          <BsPlayFill />
-          <Link to="/">Playlist</Link>
-        </li>
-        <li className="flex p-2 space-x-4 items-center">
-          <BiHistory />
-          <Link to="/">History</Link>
-        </li>
+        {SideInfo.map((data, index) => (
+          <li key={index} className="group transition-all ease-linear">
+            <div className="flex p-2 space-x-4 items-center group-hover:bg-blue-300">
+            <span>{data.icon}</span>
+            <Link to={data.link}>{data.title}</Link>
+            </div>
+          </li>
+        ))}
       </ul>
     </div>
   );
