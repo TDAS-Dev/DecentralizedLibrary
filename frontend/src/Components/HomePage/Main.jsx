@@ -1,23 +1,53 @@
+import {useState} from "react"
 import Card from "./Card";
 import Data from "./data/HomeData"
 import {Link} from "react-router-dom"
 import {FaCaretLeft, FaCaretRight} from "react-icons/fa"
+import Image from "./data/Img"
+
 const Main = () => {
+  const [counter, setCounter] = useState(0)
+
+  function previousSlide(){
+    let size = Image.length - 1;
+     (counter < size) ? setCounter(size) :
+    setCounter(counter - 1)
+    console.log(Image[counter])
+    console.log(counter - 1)
+  }
+
+  function nextSlide(){
+    let size = Image.length - 1;
+    (counter === size) ? setCounter(0):
+    setCounter(counter + 1)
+    console.log(Image[counter])
+    console.log(counter + 1)
+  }
+
   return (
     <div className="container w-full flex flex-col">
       <section className="">
         <div className="flex justify-between items-center">
         <h2 className="text-2xl my-2">New Uploads</h2>
         <div className="flex space-x-6">
-          <FaCaretLeft size={24} className="text-blue-500 text-2xl hover:text-blue-600 "/>
-          <FaCaretRight size={24} className="text-blue-500 text-2xl hover:text-blue-600 "/>
+          <FaCaretLeft onClick={previousSlide} size={24} className="text-blue-500 text-2xl hover:text-blue-600 "/>
+          <FaCaretRight onClick={nextSlide} size={24} className="text-blue-500 text-2xl hover:text-blue-600 "/>
         </div>
         </div>
+        {
+          Image.length > 0 ?
+          <img
+          src={Image[counter]}
+          alt=""
+          className="w-full h-[350px]"
+        />
+          :
         <img
           src="https://tinyurl.com/mvnamm6s"
           alt=""
           className="w-full h-[350px]"
         />
+        }
       </section>
       <section className="my-2">
         <h2 className="text-2xl my-2">Public</h2>
