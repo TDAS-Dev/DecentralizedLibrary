@@ -4,7 +4,7 @@ import { BiStopCircle } from "react-icons/bi";
 
 const Nav = () => {
   return (
-    <div className="flex flex-row items-center">
+    <div className="lg:flex md:hidden sm:hidden flex-row items-center">
       <div className="w-[400px] text-2xl font-bold px-2">Library</div>
       <div className="flex flex-row justify-between items-center bg-gray-50 p-2 w-full">
         <div className="w-[500px] px-2 flex items-center space-x-2 bg-white mr-14">
