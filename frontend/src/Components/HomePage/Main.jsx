@@ -2,7 +2,7 @@ import {useState} from "react"
 import Card from "./Card";
 import Data from "./data/HomeData"
 import {Link} from "react-router-dom"
-import {FaCaretLeft, FaCaretRight} from "react-icons/fa"
+import {FaArrowCircleLeft, FaArrowAltCircleRight} from "react-icons/fa"
 import Image from "./data/Img"
 
 const Main = () => {
@@ -30,8 +30,8 @@ const Main = () => {
         <div className="flex justify-between items-center">
         <h2 className="text-2xl my-2">New Uploads</h2>
         <div className="flex space-x-6">
-          <FaCaretLeft onClick={previousSlide} size={24} className="text-blue-500 text-2xl hover:text-blue-600 "/>
-          <FaCaretRight onClick={nextSlide} size={24} className="text-blue-500 text-2xl hover:text-blue-600 "/>
+          <FaArrowCircleLeft onClick={previousSlide} size={24} className="cursor-pointer text-blue-500 text-2xl hover:text-blue-600 "/>
+          <FaArrowAltCircleRight onClick={nextSlide} size={24} className="cursor-pointer text-blue-500 text-2xl hover:text-blue-600 "/>
         </div>
         </div>
         {
@@ -51,11 +51,11 @@ const Main = () => {
       </section>
       <section className="my-2">
         <h2 className="text-2xl my-2">Public</h2>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-4">
           {
             Data.length > 0 ?
             Data.map((data, index) =>(
-              <Card key={index} className="break-normal">
+              <Card key={index} className="break-normal shadow-blue-400">
                 <img
                   src="https://tinyurl.com/ued8wzz6"
                   alt="image"

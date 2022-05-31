@@ -3,7 +3,7 @@ import SideInfo from "./data/sidebar";
 
 const SideBar = () => {
   return (
-    <div className="flex flex-col w-[150px]">
+    <div className="lg:flex flex-col w-[150px] md:hidden sm:hidden">
       <ul className="space-y-4">
         {SideInfo.map((data, index) => (
           <li key={index} className="group transition-all ease-linear">
