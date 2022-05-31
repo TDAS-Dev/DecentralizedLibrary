@@ -30,8 +30,8 @@ const Main = () => {
         <div className="flex justify-between items-center">
         <h2 className="text-2xl my-2">New Uploads</h2>
         <div className="flex space-x-6">
-          <FaArrowCircleLeft onClick={previousSlide} size={24} className="cursor-pointer text-blue-500 text-2xl hover:text-blue-600 "/>
-          <FaArrowAltCircleRight onClick={nextSlide} size={24} className="cursor-pointer text-blue-500 text-2xl hover:text-blue-600 "/>
+          <FaArrowCircleLeft onClick={previousSlide} size={24} className="cursor-pointer text-red-500 text-2xl hover:text-red-600 "/>
+          <FaArrowAltCircleRight onClick={nextSlide} size={24} className="cursor-pointer text-red-500 text-2xl hover:text-red-600 "/>
         </div>
         </div>
         {
@@ -55,7 +55,7 @@ const Main = () => {
           {
             Data.length > 0 ?
             Data.map((data, index) =>(
-              <Card key={index} className="break-normal shadow-blue-400">
+              <Card key={index} className="break-normal hover:shadow-red-400 hover:scale-105 transition-all">
                 <img
                   src="https://tinyurl.com/ued8wzz6"
                   alt="image"
@@ -66,7 +66,7 @@ const Main = () => {
                   <div className="text-sm truncate">{data.uploader}</div>
                   <span className="text-sm text-gray-600">{data.status}</span>
                   <div>
-                    <Link to={data.link} className="text-blue-500 float-right hover:text-blue-600 my-2 py-2 px-3 rounded">Learn More</Link></div>
+                    <Link to={data.link} className="text-red-500 float-right hover:text-red-600 my-2 py-2 px-3 rounded">Learn More</Link></div>
                 </div>
               </Card>
             ))

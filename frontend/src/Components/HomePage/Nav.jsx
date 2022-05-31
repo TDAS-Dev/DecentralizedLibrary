@@ -1,6 +1,7 @@
 import { FaSearch } from "react-icons/fa";
 import { AiOutlineCloudDownload } from "react-icons/ai";
 import { BiStopCircle } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
@@ -29,19 +30,21 @@ const Nav = () => {
                 </a>
               </li>
               <li>
-                <button className="bg-blue-200 hover:bg-blue-300 px-7 text-blue-700 py-2 flex items-center">
-                  <BiStopCircle className="text-2xl mr-2 text-blue-700" />
+                <button className="bg-red-200 hover:bg-red-300 px-7 text-red-700 py-2 flex items-center">
+                  <BiStopCircle className="text-2xl mr-2 text-red-700" />
                   Record
                 </button>
               </li>
               <li>
-                <button className="bg-blue-500 hover:bg-blue-600 px-7 text-blue-50 py-2 flex items-center">
-                  <AiOutlineCloudDownload
-                    type="FaRegular"
-                    className="text-2xl mr-2 text-blue-50"
-                  />
-                  Upload
-                </button>
+                <Link to="/upload">
+                  <button className="bg-red-500 hover:bg-red-600 px-7 text-red-50 py-2 flex items-center">
+                    <AiOutlineCloudDownload
+                      type="FaRegular"
+                      className="text-2xl mr-2 text-red-50"
+                    />
+                    Upload
+                  </button>
+                </Link>
               </li>
             </ul>
           </nav>
