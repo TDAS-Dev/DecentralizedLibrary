@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import Hamburger from "../Utility/Hamburger"
 import { useMoralis } from "react-moralis";
 
-function LpNavBar( { setMobileNavBar, mobileNavBar} ){
+function LpNavBar( { setMobileNavBar, mobileNavBar, connect, address, disconnect} ){
   const { authenticate, isAuthenticated } = useMoralis();
 
   const login = async () => {
@@ -25,7 +25,11 @@ function LpNavBar( { setMobileNavBar, mobileNavBar} ){
     <div className="flex lg:flex-row md:flex-col sm:flex-col justify-between items-center py-10 px-20">
       <Hamburger className="" setMobileNavBar={setMobileNavBar} mobileNavBar={mobileNavBar}/>
       <Link to="/"><Logo className=""/></Link>
-      <Button className="md:hidden sm:hidden  lg:block" name="Connect" run={login}/>
+      {address ? 
+      <Button className="md:hidden sm:hidden  lg:block" name="Connect" run={connect}/>
+      :
+      <Button className="md:hidden sm:hidden  lg:block" name="Connect" run={disconnect}/>
+    }
     </div>
   )
 }

@@ -5,7 +5,7 @@ import Button from "../Utility/Button"
 import { Link } from "react-router-dom";
 import { useMoralis } from "react-moralis";
 
-function Hero({ setMobileNavBar, mobileNavBar }){
+function Hero({ setMobileNavBar, mobileNavBar, connect, address, disconnect }){
     //function to prevent the explore library function from erroring out
     const nullFunction = () => {return}
 
@@ -34,14 +34,20 @@ function Hero({ setMobileNavBar, mobileNavBar }){
           </div>
           {/* overlay ends */}
           <div className="absolute w-full h-full z-30">
-            <LpNavBar setMobileNavBar={setMobileNavBar} mobileNavBar ={mobileNavBar}/>
+            <LpNavBar connect={connect} disconnect={disconnect} address={address} setMobileNavBar={setMobileNavBar} mobileNavBar ={mobileNavBar}/>
             <div className="lg:py-36 md:py-40 sm:pt-20 sm:pb-40 lg:flex lg:flex-col lg:items-center">
                 <h2 className={h2herostyle}>Welcome Back!</h2>
                 <h1 className={h1herostyle}>Unlimited books, Articles, and more.</h1>
                 <h2 className={h2herostyle}>Read anytime. Access anywhere.</h2>
                 <div className={buttonDivStyle}>
                     <Link to="/home"><Button className="" name="Explore Library" run={nullFunction}/></Link>
-                    <Button className="" name="Connect Wallet" run={login}/>
+                    {
+                      address ? 
+                      <Button className="" name="Connect Wallet" run={connect}/>
+                      :
+                      <Button className="" name="Connect Wallet" run={disconnect}/>
+
+                    }
                 </div>
             </div>
           </div>
