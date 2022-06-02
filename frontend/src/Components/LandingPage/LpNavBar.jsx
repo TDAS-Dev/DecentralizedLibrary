@@ -2,23 +2,11 @@ import Logo from "../Utility/Logo"
 import Button from "../Utility/Button"
 import { Link } from "react-router-dom"
 import Hamburger from "../Utility/Hamburger"
-import { useMoralis } from "react-moralis";
 
 function LpNavBar( { setMobileNavBar, mobileNavBar} ){
-  const { authenticate, isAuthenticated } = useMoralis();
 
   const login = async () => {
-    //if user is authenticated already, do not login user again. $resource management
-    if (!isAuthenticated) {
-      await authenticate({signingMessage: "Log in using Moralis" })
-        .then(function (user) {
-          console.log("logged in user:", user);
-          console.log(user.get("ethAddress"));
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-    }
+   console.log("login")
   }
 
   return(

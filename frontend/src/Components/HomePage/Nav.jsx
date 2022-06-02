@@ -20,12 +20,12 @@ const Nav = () => {
           <nav>
             <ul className="flex space-x-4 items-center">
               <li>
-                <a href="" className="font-medium mr-2">
+                <a href="/explore" className="font-medium mr-2">
                   Explore
                 </a>
               </li>
               <li>
-                <a href="" className="font-medium mr-2">
+                <a href="/event" className="font-medium mr-2">
                   Event
                 </a>
               </li>
