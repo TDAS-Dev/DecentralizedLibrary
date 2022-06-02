@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { ethers } from "ethers";
 import Hero from "./Hero";
 import LpCardLeft from "./LpCardLeft";
 import LpCardRight from "./LpCardRight";
@@ -10,44 +8,13 @@ import LpImage3 from "../../Images/landingPageImg3.jpg";
 import LpImage4 from "../../Images/landingPageImg4.jpg";
 
 function LandingPage({ setMobileNavBar, mobileNavBar }) {
-  const [walletAddress, setWalletAddress] = useState("");
-  //   const connectToMetamask = () => {
-  //     const provider = new ethers.providers.Web3Provider(window.ethereum);
-  //     const accounts = await provider.send("eth_requestAccounts", []);
-  //     setAddress({ selectedAddress: accounts[0] });
-  //   };
-
-  async function connectToMetamask() {
-    if (!window.ethereum) return console.log("Metamask not detected");
-    console.log("Metamask Detected");
-    try {
-      //   const accounts = await window.ethereum.request({
-      //       method: "eth_requestAccounts"
-      //   })
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const accounts = await provider.send("eth_requestAccounts", []);
-      setWalletAddress(accounts[0]);
-      console.log(accounts[0]);
-    } catch (error) {
-      console.error("Error connecting...");
-    }
-  }
-
-  async function disconnectMetamask() {
-    await window.ethereum.request({
-      method: "wallet_requestPermissions",
-      params: [{ eth_accounts: {} }],
-    });
-  }
+  // const [walletAddress, setWalletAddress] = useState("");
 
   return (
     <div className="h-full w-full">
       <Hero
         setMobileNavBar={setMobileNavBar}
-        connect={connectToMetamask}
-        disconnect={disconnectMetamask}
         mobileNavBar={mobileNavBar}
-        address={walletAddress}
       />
       <LpCardLeft
         h1="Upload documents to Ipfs,Infura."

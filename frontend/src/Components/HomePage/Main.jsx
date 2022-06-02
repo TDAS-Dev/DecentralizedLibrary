@@ -58,7 +58,7 @@ const Main = () => {
               <Card key={index} className="break-normal hover:shadow-red-400 hover:scale-105 transition-all">
                 <img
                   src="https://tinyurl.com/ued8wzz6"
-                  alt="image"
+                  alt="card"
                   className="w-full"
                 />
                 <div className="px-3 py-2">
