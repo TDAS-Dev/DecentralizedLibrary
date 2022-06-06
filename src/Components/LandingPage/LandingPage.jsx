@@ -1,3 +1,4 @@
+// import { useState, useEffect } from "react";
 import Hero from "./Hero";
 import LpCardLeft from "./LpCardLeft";
 import LpCardRight from "./LpCardRight";
@@ -8,14 +9,43 @@ import LpImage3 from "../../Images/landingPageImg3.jpg";
 import LpImage4 from "../../Images/landingPageImg4.jpg";
 
 function LandingPage({ setMobileNavBar, mobileNavBar }) {
+  // const [currentAccount, setCurrentAccount] = useState(null);
+  // const checkWalletIsConnected = () => {
+  //   const { ethereum } = window;
+  //   if (!ethereum) return console.log("Install Metamask");
+  //   console.log("Metamask Detected");
+  // };
+
+  // const connectWalletHandler = async () => {
+  //   const { ethereum } = window;
+
+  //   if (!ethereum) return alert("Please Install Metamask");
+
+  //   try {
+  //     const accounts = await ethereum.request({
+  //       method: "eth_requestAccounts",
+  //     });
+  //     console.log("found an account! Address", accounts[0]);
+  //     setCurrentAccount(accounts[0]);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  // const mintNftHandler = () => {};
   // const [walletAddress, setWalletAddress] = useState("");
+  // const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
+  // console.log(web3)
+
+  // useEffect(() => {
+    // checkWalletIsConnected();
+  // }, []);
 
   return (
     <div className="h-full w-full">
-      <Hero
-        setMobileNavBar={setMobileNavBar}
-        mobileNavBar={mobileNavBar}
-      />
+      {/* <button onClick={connectWalletHandler} className="text-lg p-2 rounded dark-gray-500">Test button</button> */}
+      {/* <div className="text-gray-700">{currentAccount}</div> */}
+      <Hero setMobileNavBar={setMobileNavBar} mobileNavBar={mobileNavBar} />
       <LpCardLeft
         h1="Upload documents to Ipfs,Infura."
         p="One upload, lifetime access to your document at your calling and choice."
